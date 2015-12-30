@@ -14,7 +14,7 @@ define("kUsername", "username"); // The username.
 define("kPassword", "password"); // The password.
 ```
 ### Usage
-Using Database is easy. Just include it (either manually or using Composer's loader), and create an instance by supplying the above constants. See below for more examples.
+Using Database is easy. Just include it (either manually or using Composer's loader), and create an instance by supplying the above constants. See [below](#examples) for more examples.
 ```php
 use saturn\database\Database;
 
