@@ -146,8 +146,6 @@ public function rowCount() {}
  *  @return     int
  */
 public function lastInsertId() {}
-
-}
 ```
 ### Examples
 Retrieving from the database:
@@ -164,7 +162,7 @@ $response = $database->read("SELECT SomeColumn FROM SomeTable");
 // Retrieve a specific row like this:
 $response = $database->read("SELECT SomeColumn FROM SomeTable WHERE id = :id", array("id" => $id));
 ```
-Adding to the database
+Adding to the database:
 ```php
 $values = array(
   "ThisValue"  => "Foo!",
@@ -180,7 +178,7 @@ $database->bindValue(":ThatValue", $values["ThatValue"]);
 
 $response = $this->write();
 ```
-Deleting from the database
+Deleting from the database:
 ```php
 $SQLQuery = "DELETE FROM SomeTable WHERE id = :id";
 $SQLParam = array("id" => $id);
