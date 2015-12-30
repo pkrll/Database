@@ -3,9 +3,9 @@
  * A wrapper class for the PDO class.
  *
  * @author Ardalan Samimi
- * @version 1.2.0
+ * @version 1.2.1
  */
-namespace saturn;
+namespace saturn\database;
 use \PDO;
 use \PDOException;
 

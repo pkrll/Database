@@ -1,6 +1,6 @@
 {
     "name": "saturn/database",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "type": "library",
     "keywords": [
         "Database", "PDO", "MySQL"
@@ -16,7 +16,7 @@
     "homepage": "https://github.com/pkrll/Database",
     "autoload": {
         "psr-4" : {
-            "saturn\\Database\\" : ""
+            "saturn\\database\\" : ""
         }
     }
 }
