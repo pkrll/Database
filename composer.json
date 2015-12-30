@@ -1,0 +1,22 @@
+{
+    "name": "saturn/database",
+    "version": "1.2.0",
+    "type": "library",
+    "keywords": [
+        "Database", "PDO", "MySQL"
+    ],
+    "description": "PHP PDO wrapper class.",
+    "authors": [
+        {
+            "name": "Ardalan Samimi",
+            "role": "Developer"
+        }
+    ],
+    "license": "GPL-2.0",
+    "homepage": "https://github.com/pkrll/Database",
+    "autoload": {
+        "psr-4" : {
+            "saturn\\Database\\" : ""
+        }
+    }
+}
