@@ -1,4 +1,4 @@
-## Database [![Latest Stable Version](https://poser.pugx.org/saturn/taurus/v/stable)](https://packagist.org/packages/saturn/database) [![License](https://poser.pugx.org/saturn/database/license)](https://packagist.org/packages/saturn/database)
+## Database [![Latest Stable Version](https://poser.pugx.org/saturn/database/v/stable)](https://packagist.org/packages/saturn/database) [![License](https://poser.pugx.org/saturn/database/license)](https://packagist.org/packages/saturn/database)
 A PDO Wrapper Class.
 ### Installation
 ##### With Composer (recommended):
