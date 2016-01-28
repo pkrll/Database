@@ -3,7 +3,7 @@
  * A wrapper class for the PDO class.
  *
  * @author Ardalan Samimi
- * @version 1.2.1
+ * @version 1.2.2
  */
 namespace saturn\database;
 use \PDO;
