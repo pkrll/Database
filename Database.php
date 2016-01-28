@@ -37,7 +37,7 @@ class Database {
      */
     public function __construct($hostname, $database, $username, $password) {
         try {
-            $this->connection = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
+            $this->connection = new PDO("mysql:host=$hostname;dbname=$database;charset=utf8", $username, $password);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
