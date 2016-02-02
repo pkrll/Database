@@ -3,7 +3,7 @@
  * A wrapper class for the PDO class.
  *
  * @author Ardalan Samimi
- * @version 1.2.2
+ * @version 1.3.0
  */
 namespace saturn\database;
 use \PDO;
@@ -94,23 +94,6 @@ class Database {
         return $this->lastInsertId();
     }
     /**
-     * Return an array of error information about the last
-     * performed operation.
-     *
-     * @param   bool    Value determines if the errorInfo should
-     *                  be performed on the database handle or
-     *                  the statement handle.
-     * @return  array
-     */
-    public function error($connection = true) {
-        if ($connection) {
-            return $this->connection->errorInfo();
-        }
-
-        return $this->statement->errorInfo();
-    }
-
-    /**
      * Execute the prepared SQL statement.
      *
      * @param   array  Optional. The input parameters.
@@ -120,7 +103,9 @@ class Database {
         try {
             $this->statement->execute($params);
         } catch (PDOException $error) {
-            return $error->getMessage();
+            return array(
+                "error" => $error->getMessage()
+            );
         }
 
         return true;
@@ -217,5 +202,24 @@ class Database {
     public function lastInsertId() {
         return $this->connection->lastInsertId();
     }
+    /**
+     * Return an array of error information about the last
+     * performed operation.
+     *
+     * @param   bool    Value determines if the errorInfo should
+     *                  be performed on the database handle or
+     *                  the statement handle.
+     * @return  array
+     */
+    public function error($connection = true) {
+        if ($connection) {
+            return array(
+                "error" => $this->connection->errorInfo()
+            );
+        }
 
+        return array(
+            "error" => $this->statement->errorInfo()
+        );
+    }
 }
